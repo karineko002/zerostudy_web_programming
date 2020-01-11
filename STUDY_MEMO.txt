@@ -7,4 +7,8 @@ WEBブラウザに表示（Alt + L + O）
 →タグの構造
 →必ず半角英数字
 →改行は<br>で行う
+HTML5の書き方
+→<!DOCTYPE html>　※ドキュメントタイプ
+→<html lang="ja">※言語の指定
+→<meta charset="UTF-8">※エンコード方式の指定
 
