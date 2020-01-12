@@ -22,3 +22,10 @@ imgタグ
 →<img src="ファイル名" width="横幅" height="高さ">
 <a>タグ（ハイパーリンク）
 →<a href="リンク先のアドレス" target="ターゲット名">○○</a>
+<table>
+→<table>
+    <tr>
+      <th>
+        <td> </td>
+      </th>
+  </table>
