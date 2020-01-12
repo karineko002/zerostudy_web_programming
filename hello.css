@@ -1,0 +1,25 @@
+/* リスト1-12 CSSファイルを使った設定方法 */
+body {background-color:#eeffee;}
+h1 {color:white;
+    background-color:red;}
+p {color:blue;
+    background-color:white;}
+    
+    /* ※公式テキストにタイポあると思われる。
+    
+      サンプルより
+      リスト1-12
+      body {
+        background-color:#eeffee;
+      }
+      h1 {
+        color:white;
+        background-color:red;
+      }
+      p {
+        color:blue;
+        bakground-color:white;
+      }
+    */
+
+

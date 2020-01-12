@@ -45,7 +45,9 @@ background-color
   …スタイルの設定…
   </style>
 →○○{スタイルの値}
-
+CSSファイルの読み込み
+→<link rel="stykesheet" href="ファイル名">
+→HTMLファイルとCSSファイルを分けると楽かもしれない
 
 
 
