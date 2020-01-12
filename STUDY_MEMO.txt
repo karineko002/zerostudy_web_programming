@@ -40,7 +40,11 @@ colorの値
 →16進数らしい
 background-color
 →背景色
-
+<style>タグ
+→<style>
+  …スタイルの設定…
+  </style>
+→○○{スタイルの値}
 
 
 
