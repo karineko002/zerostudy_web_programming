@@ -38,6 +38,8 @@ style属性について
 →style="スタイル名1:値1; スタイル名2:値2;……"
 colorの値
 →16進数らしい
+background-color
+→背景色
 
 
 
