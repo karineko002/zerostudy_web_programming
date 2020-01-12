@@ -1,12 +1,28 @@
-<!-- リスト1-13　CSSファイルを使った設定方法 -->
+<!-- リスト1-14　IDでスタイルを設定する -->
 <!DOCTYPE html>
 <html lang="ja">
 <head>
 	<meta charset="UTF-8">
-  <title>Hello!</title>
-  <link rel="stylesheet" href="hello.css">
+	<title>Hello!</title>
+	<style>
+	body { background-color:#eeffee; }
+	h1 { color:red; }
+	p { color:blue; }
+	#middle {
+		color:white;
+		background-color:green;
+  }
+  #duplication{color:black;}
+	</style>
 </head>
 <body>
 	<h1>Hello!</h1>
-	<p class="s1">スタイルを利用します。</p>
+	<p>スタイルを利用します。</p>
+	<p id="middle">真ん中の１行だけ、</p>
+  <p>別のスタイルを設定します。</p>
+  <h2 id="middle">属性が共通していれば関係ないんだっけ？？？</h2>
+  <p>関係ない模様</p>
+  <h3 id="duplication" id="middle">重複できるの？</h3>
+  <p>できない。先に記述したIDのCSSが反映される</p>
 </body>
+</html>
