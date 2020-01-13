@@ -64,7 +64,17 @@ ID
 →3つの設定方法：タグを使う・IDを使う・クラスを使う
 →div：ブロック要素
 →span：インライン要素
-
+フォントのスタイル
+→フォント名：　font-family:ファミリー名
+→フォントサイズ：　font-size:サイズの指定(pt)
+→ボールド表示：　font-weight:ボールドの指定(bold/plain)
+→イタリックの表示：　font-style:イタリックの指定(italic/plain)
+→
+→
+→
+→
+→
+→
 
 
 
