@@ -69,6 +69,25 @@ ID
 →フォントサイズ：　font-size:サイズの指定(pt)
 →ボールド表示：　font-weight:ボールドの指定(bold/plain)
 →イタリックの表示：　font-style:イタリックの指定(italic/plain)
+margin
+→要素と要素の間の感覚を示すもの
+→要素の内側の余白（という認識）
+→margin: 5px 5px 5px 5px; 上右下左
+padding
+→要素の周りに余白を設定するもの
+→要素の外側の余白（という認識）
+→padding: 5px 5px 5px 5px; 上右下左
+要素の位置と大きさについて
+→width:要素の横幅の設定
+→height:要素の高さの設定
+→top:上からの距離を設定
+→left:左からの距離を設定
+→bottom:下からの距離を設定
+→right:右からの距離を設定
+position属性（要素の位置の変更）
+→static:デフォルト設定。固定、スタイルの指定で変更不可。
+→absolute:表示エリア全体の絶対値で設定。
+→relative:デフォルトからの相対位置で設定。
 →
 →
 →

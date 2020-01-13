@@ -1,34 +1,32 @@
-<!-- リスト1-19　フォントのスタイルを使おう -->
+<!-- リスト1-20　フォントのスタイルを使おう -->
 <!DOCTYPE html>
 <html lang="ja">
 <head>
 	<meta charset="UTF-8">
 	<title>Hello!</title>
 	<style>
-	body { background-color:#ffeeee; }
+	body { font-weight:bold; }
 	h1 {
 		color:white;
 		background-color:red;
-		font-size:36pt;
-		font-family:Impact;
+		padding:5px;
 	}
-	.s1 {
-		color:#990000;
-		font-size:12pt;
-		font-weight:bold;
+	p {
+		color:#000099;
+		background-color:#ddddff;
+		margin:5px;
 	}
-	.s2 {
-		color:#990000;
-		font-size:12pt;
-		font-style: italic;
-	}
-
 	</style>
 </head>
 <body>
 	<h1>Hello!</h1>
-	<p class="s1">スタイルを利用します。</p>
-	<p class="s2">スタイルを利用します。</p>
-	<!-- 斜体にならないなぁ（まあ斜体なんてしないと思うから放置） -->
+	<p>padding</p>
+	<p style="padding:5px;">段落に余白を設定します。</p>
+	<p style="padding:10px;">段落に余白を設定します。</p>
+	<p style="padding:15px;">段落に余白を設定します。</p>
+	<p>margin</p>
+	<p style="margin:5px;">段落に余白を設定します。</p>
+	<p style="margin:10px;">段落に余白を設定します。</p>
+	<p style="margin:15px;">段落に余白を設定します。</p>
 </body>
 </html>
