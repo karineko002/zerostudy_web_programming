@@ -1,24 +1,22 @@
-<!-- リスト1-15　クラスを使ったスタイル設定 -->
+<!-- リスト1-18　テキストの一部だけ変更するには -->
 <!DOCTYPE html>
 <html lang="ja">
 <head>
 	<meta charset="UTF-8">
 	<title>Hello!</title>
 	<style>
-	body { background-color:#cccccc; }
+	body { font-weight:bold; }
 	h1 { color:red; }
-	.s1 { color:blue;
-		background-color:white; }
-	.s2 {
+	.s {
 		color:white;
-		background-color:blue;  }
+		background-color:green;
+	}
 	</style>
 </head>
 <body>
 	<h1>Hello!</h1>
-	<p class="s1">スタイル1を利用します。</p>
-	<p class="s2">スタイル2を利用します。</p>
-	<p class="s1">スタイル1を利用します。</p>
-	<p class="s2">スタイル2を利用します。</p>
+	<p>テキストの<div class="s">一部分だけ</div>に
+	<p>テキストの<span class="s">一部分だけ</span>に
+別のスタイルを適用します。</p>
 </body>
 </html>
