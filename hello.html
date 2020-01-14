@@ -1,4 +1,4 @@
-<!-- リスト2-10　複雑な繰り返し「for」 -->
+<!-- リスト2-11　名前で管理する配列 -->
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -14,15 +14,14 @@
 <body>
 	<h1>Hello!</h1>
 	<script>
-	var data = [98, 67, 81, 59, 76];
+	var data = {'国語':98, '数学':67, '英語':81, '理科':59, '社会':76};
 	var total = 0;
-	for (var i = 0;i < 5;i++){
-		total += data[i];
+	for (key in data){
+		total += data[key];
+		document.write('[' + key + ':' + data[key] + ']');
 	}
-	document.write("合計は、" + total + "<br>" + "平均は、" + (total / 5));
-	document.write("<br>");
-	var i = 2
-	document.write("配列" + i + "に格納されている値は" + data[i]);
+	document.write("<br><br>");
+	document.write("合計は、" + total + "、平均は、" + (total / 5));
 	</script>
 </body>
 
