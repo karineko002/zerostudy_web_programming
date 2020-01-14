@@ -1,4 +1,4 @@
-<!-- リスト2-8　便利に計算する演算子 -->
+<!-- リスト2-10　複雑な繰り返し「for」 -->
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -14,13 +14,15 @@
 <body>
 	<h1>Hello!</h1>
 	<script>
-	var x = 2;
-	var end = 100;
+	var data = [98, 67, 81, 59, 76];
 	var total = 0;
-	while (x <= end){
-	total += x++;
-}
-	document.write(end + "までの合計は、" + total);
+	for (var i = 0;i < 5;i++){
+		total += data[i];
+	}
+	document.write("合計は、" + total + "<br>" + "平均は、" + (total / 5));
+	document.write("<br>");
+	var i = 2
+	document.write("配列" + i + "に格納されている値は" + data[i]);
 	</script>
 </body>
 
