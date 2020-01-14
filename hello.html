@@ -1,4 +1,4 @@
-<!-- リスト2-4　条件分岐「if」 -->
+<!-- リスト2-6　たくさんの分岐を作る「switch」 -->
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -9,27 +9,27 @@
 	h1 { color:white;padding:5px; font-size:24pt;
 		background-color:red; }
 	.gu { color:red; }
-	.ki {color:blue; }
+	.choki {color:blue; }
+	.pa {color:green; }
 	</style>
 </head>
 
 <body>
 	<h1>Hello!</h1>
 	<script>
-	var x = 12345;
-	if (x % 2 == 0){
-		document.write(x + 'は、<span class="gu">偶数</span>です。');
-	} else {
-		document.write(x + 'は、<span class="ki">奇数</span>です。');
-	}
-	
-		document.write("<br>");
-	
-	var y = 100;
-	if (y % 2 == 0){
-		document.write(y + 'は、<span class="gu">偶数</span>です。');
-	} else {
-		document.write(y + 'は、<span class="ki">奇数</span>です。');
+	var te = "チョキ";
+	switch(te){
+	case "グー":
+		document.write('私は<span class="pa">パー</span>。私の勝ちです。');
+		break;
+	case "チョキ":
+		document.write('私は<span class="gu">グー</span>。私の勝ちです。');
+		break;
+	case "パー":
+		document.write('私は<span class="choki">チョキ</span>。私の勝ちです。');
+		break;
+	default:
+		document.write("ちょっとよくわかりません...");
 	}
 	</script>
 </body>
