@@ -1,27 +1,30 @@
-<!-- リスト2-11　名前で管理する配列 -->
+<!-- リスト2-12　変数のスコープ -->
 <!DOCTYPE html>
 <html lang="ja">
 <head>
 	<meta charset="UTF-8">
 	<title>Hello!</title>
 	<style>
-	body { font-size:16pt; font-weight:bold; }
+	body { font-size:14pt; font-weight:plain; }
 	h1 { color:white;padding:5px; font-size:24pt;
 		background-color:red; }
+	.No { color:red;  font-weight:bold;}
 	</style>
+	<script>
+	var count = 1;
+	var fn = function(msg){
+		document.write('<p><span class="No">' + count++ +
+			'. </span>' + msg + '</p>');
+	}
+	</script>
 </head>
 
 <body>
 	<h1>Hello!</h1>
 	<script>
-	var data = {'国語':98, '数学':67, '英語':81, '理科':59, '社会':76};
-	var total = 0;
-	for (key in data){
-		total += data[key];
-		document.write('[' + key + ':' + data[key] + ']');
-	}
-	document.write("<br><br>");
-	document.write("合計は、" + total + "、平均は、" + (total / 5));
+	fn('Hello!');
+	fn("これは、メッセージの表示例です。");
+	fn("関数を使えば、たくさんのメッセージを簡単に表示できます。");
 	</script>
 </body>
 
