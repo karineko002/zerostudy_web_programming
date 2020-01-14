@@ -1,4 +1,4 @@
-<!-- リスト2-6　たくさんの分岐を作る「switch」 -->
+<!-- リスト2-8　便利に計算する演算子 -->
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -8,29 +8,19 @@
 	body { font-size:16pt; font-weight:bold; }
 	h1 { color:white;padding:5px; font-size:24pt;
 		background-color:red; }
-	.gu { color:red; }
-	.choki {color:blue; }
-	.pa {color:green; }
 	</style>
 </head>
 
 <body>
 	<h1>Hello!</h1>
 	<script>
-	var te = "チョキ";
-	switch(te){
-	case "グー":
-		document.write('私は<span class="pa">パー</span>。私の勝ちです。');
-		break;
-	case "チョキ":
-		document.write('私は<span class="gu">グー</span>。私の勝ちです。');
-		break;
-	case "パー":
-		document.write('私は<span class="choki">チョキ</span>。私の勝ちです。');
-		break;
-	default:
-		document.write("ちょっとよくわかりません...");
-	}
+	var x = 2;
+	var end = 100;
+	var total = 0;
+	while (x <= end){
+	total += x++;
+}
+	document.write(end + "までの合計は、" + total);
 	</script>
 </body>
 
