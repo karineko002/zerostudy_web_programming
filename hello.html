@@ -1,42 +1,23 @@
-<!-- リスト1-22　表示位置を移動させる -->
+<!-- リスト2-2　Javascriptの書き方 -->
 <!DOCTYPE html>
 <html lang="ja">
 <head>
 	<meta charset="UTF-8">
 	<title>Hello!</title>
 	<style>
-	body { font-weight:bold; }
-	h1 {
-		color:white;
-		background-color:red;
-		padding:5px;
-	}
-	p {
-		color:#000099;
-		background-color:#ddddff;
-		padding:5px;
-		position:relative;
-		/* position:absolute; */
-		width:180px;
-	}
-	.s1 {
-		color:#000099;
-		background-color:#ddddff;
-		padding:5px;
-		position:absolute;
-		width:180px;
-		height:180px;
-	}
+	body { font-size:16pt; font-weight:bold; }
+	h1 { color:white;padding:5px; font-size:24pt;
+		background-color:red; }
 	</style>
 </head>
 <body>
 	<h1>Hello!</h1>
-	<!-- <p style="left:0px;">段落の位置と大きさを設定します。</p><br>
-	<p style="left:50px;">段落の位置と大きさを設定します。</p><br>
-	<p style="left:100px;">段落の位置と大きさを設定します。</p><br> -->
-	<p class="s1" style="left:20px;top:70px;">段落の位置と大きさを設定します。</p>
-	<p class="s1" style="left:220px;top:70px;">段落の位置と大きさを設定します。</p>
-	<p class="s1" style="left:20px;top:270px;">段落の位置と大きさを設定します。</p>
-	<p class="s1" style="left:220px;top:270px;">段落の位置と大きさを設定します。</p>
+	<script>
+	var x = 123456;
+	document.write(x);
+	document.write("<br>");
+	x = "Hello";
+	document.write(x);
+	</script>
 </body>
 </html>
