@@ -1,4 +1,4 @@
-<!-- リスト2-4　計算と演算記号とテキストの足し算 -->
+<!-- リスト2-4　条件分岐「if」 -->
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -8,15 +8,30 @@
 	body { font-size:16pt; font-weight:bold; }
 	h1 { color:white;padding:5px; font-size:24pt;
 		background-color:red; }
+	.gu { color:red; }
+	.ki {color:blue; }
 	</style>
 </head>
+
 <body>
 	<h1>Hello!</h1>
 	<script>
-	var x = 123;
-	var y = 456;
-	var z = x + y;
-	document.write(x + " + " + y + " = " + z);
+	var x = 12345;
+	if (x % 2 == 0){
+		document.write(x + 'は、<span class="gu">偶数</span>です。');
+	} else {
+		document.write(x + 'は、<span class="ki">奇数</span>です。');
+	}
+	
+		document.write("<br>");
+	
+	var y = 100;
+	if (y % 2 == 0){
+		document.write(y + 'は、<span class="gu">偶数</span>です。');
+	} else {
+		document.write(y + 'は、<span class="ki">奇数</span>です。');
+	}
 	</script>
 </body>
+
 </html>
