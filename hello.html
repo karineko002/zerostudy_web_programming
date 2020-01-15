@@ -1,51 +1,60 @@
-<!-- Chaoter3 リスト3-5　checkedでチェック状態を得る -->
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-	<meta charset="UTF-8">
-	<title>Hello!</title>
-	<style>
-	body { font-size:14pt; font-weight:plain; }
-	h1 { color:white;padding:5px; font-size:24pt;
-		background-color:red; }
-	</style>
-
-	<script>
-	function clickNow(){
-		var ck = document.querySelector('#check1');
-		var rA = document.querySelector('#radioA');
-		var rB = document.querySelector('#radioB');
-		var res = "";
-		if (ck.checked){
-			res = "あなたは大人ですね。";
-		} else {
-			res = "まだ子供ですね。";
+<!-- Chaoter3 リスト3-5　<select>で複数選択を処理する -->
+	<!DOCTYPE html>
+	<html lang="ja">
+	<head>
+		<meta charset="UTF-8">
+		<title>Hello!</title>
+		<style>
+		body { font-size:14pt; font-weight:plain; }
+		h1 { color:white;padding:5px; font-size:24pt;
+			background-color:red; }
+		</style>
+	
+		<script>
+		function clickNow(){
+			// プルダウンメニューの処理
+			var mobile = document.querySelector('#mobile');
+			var res = '<p>' + mobile.value + '</p>'; //mobileのValueを取得して表示
+			
+			// 複数選択リストの処理
+			var pc = document.querySelector('#pc');
+			var opts = pc.getElementsByTagName('option');
+			var sel_pc = '<p>';
+			for (var opt in opts){
+				if (opts[opt].selected){
+					sel_pc += opts[opt].value + ' ';
+				}
+			}
+			sel_pc += '</p>';
+			var msg = document.querySelector('#msg');
+			msg.innerHTML = res += sel_pc;
 		}
-		if (rA.checked){
-			res += "女性ですね。";
-		}
-		if (rB.checked){
-			res += "男性ですね。";
-		}
-		var msg = document.querySelector('#msg');
-		msg.textContent = res;
-	}
-	</script>
-</head>
-
-<body>
-	<h1 id="title">Hello!</h1>
-	<p id="msg">あなたの名前は？</p>
-	<p>
-	<input type="checkbox" id="check1">
-	<label for="check1">成人</label>
-	</p>
-	<p>
-	<input type="radio" name="radio1" id="radioA">
-		<label for="radioA">女性</label><br>
-	<input type="radio" name="radio1" id="radioB">
-		<label for="radioB">男性</label>
-	</p>
-	<button onclick="clickNow();">Click</button>
-</body>
-</html>
+		</script>
+	</head>
+	
+	<body>
+		<h1 id="title">Hello!</h1>
+		<p id="msg">選択してください。</p>
+		<!-- mobileの選択　単一選択 -->
+		<p>
+		<select id="mobile">
+			<option>iPhone</option>
+			<option>Android</option>
+			<option>WindowsPhone</option>
+			<option>ガラケー</option>
+		</select>
+		</p>
+		<!-- pcの選択　multipleなので複数選択 -->
+		<p>
+		<select id="pc" size="5" multiple>
+			<option>Windows</option>
+			<option>Mac OS X</option>
+			<option>Linux</option>
+			<option>Chorme OS</option>
+			<option>Other...</option>
+		</select>
+		</p>
+		<button onclick="clickNow();">Click</button>
+	</body>
+	</html>
+	
