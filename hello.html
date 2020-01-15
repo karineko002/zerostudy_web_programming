@@ -1,4 +1,4 @@
-<!-- Chaoter3 リスト3-3　イベントの操作 -->
+<!-- Chaoter3 リスト3-4　フォームの利用 -->
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -12,16 +12,20 @@
 
 	<script>
 	function clickNow(){
+		var input1 = document.querySelector('#input1');
+		var value = input1.value;
 		var msg = document.querySelector('#msg');
-		msg.textContent = "クリックしたね！！！";
+		msg.textContent = "こんにちは、" + value + "さん！";
 	}
 	</script>
 </head>
 
 <body>
 	<h1 id="title">Hello!</h1>
-	<p id="msg">ボタンをクリックして下さい。</p>
+	<p id="msg">あなたの名前は？</p>
+	<input type="text" id="input1">
 	<button onclick="clickNow();">Click</button>
 </body>
 </html>
+
 
