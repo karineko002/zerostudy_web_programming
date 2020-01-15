@@ -1,60 +1,42 @@
-<!-- Chaoter3 リスト3-5　<select>で複数選択を処理する -->
-	<!DOCTYPE html>
-	<html lang="ja">
-	<head>
-		<meta charset="UTF-8">
-		<title>Hello!</title>
-		<style>
-		body { font-size:14pt; font-weight:plain; }
-		h1 { color:white;padding:5px; font-size:24pt;
-			background-color:red; }
-		</style>
-	
-		<script>
-		function clickNow(){
-			// プルダウンメニューの処理
-			var mobile = document.querySelector('#mobile');
-			var res = '<p>' + mobile.value + '</p>'; //mobileのValueを取得して表示
-			
-			// 複数選択リストの処理
-			var pc = document.querySelector('#pc');
-			var opts = pc.getElementsByTagName('option');
-			var sel_pc = '<p>';
-			for (var opt in opts){
-				if (opts[opt].selected){
-					sel_pc += opts[opt].value + ' ';
-				}
-			}
-			sel_pc += '</p>';
-			var msg = document.querySelector('#msg');
-			msg.innerHTML = res += sel_pc;
-		}
-		</script>
-	</head>
-	
-	<body>
-		<h1 id="title">Hello!</h1>
-		<p id="msg">選択してください。</p>
-		<!-- mobileの選択　単一選択 -->
-		<p>
-		<select id="mobile">
-			<option>iPhone</option>
-			<option>Android</option>
-			<option>WindowsPhone</option>
-			<option>ガラケー</option>
-		</select>
-		</p>
-		<!-- pcの選択　multipleなので複数選択 -->
-		<p>
-		<select id="pc" size="5" multiple>
-			<option>Windows</option>
-			<option>Mac OS X</option>
-			<option>Linux</option>
-			<option>Chorme OS</option>
-			<option>Other...</option>
-		</select>
-		</p>
-		<button onclick="clickNow();">Click</button>
-	</body>
-	</html>
-	
+<!-- Chaoter3 リスト3-7　スライダーとrgb関数で色を操作 -->
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>Hello!</title>
+	<style>
+	body { font-size:14pt; font-weight:plain; }
+	h1 { color:white;padding:5px; font-size:24pt;
+		background-color:red; }
+	</style>
+
+	<script>
+	function clickNow(){
+		// 各要素の値を取り出す
+		var r = document.querySelector('#red').value;
+		var g = document.querySelector('#green').value;
+		var b = document.querySelector('#blue').value;
+		// これはよくわからん、ID="msg"のバックグラウンドカラーをいじくる
+		var msg = document.querySelector('#msg');
+		msg.style.backgroundColor = 'rgb(' + r + ',' + g + ',' + b + ')';
+	}
+	</script>
+</head>
+
+<body>
+	<h1 id="title">Hello!</h1>
+	<p id="msg">色を変更してみよう</p>
+	<p>
+	<!-- ここで値を調整 -->
+	<input type="range" id="red" max="255"><br>
+	<input type="range" id="green" max="255"><br>
+	<input type="range" id="blue" max="255"><br>
+	</p>
+	<!-- クリックしたら関数が実行バックグラウンドカラーが変更される -->
+	<button onclick="clickNow();">Click</button>
+</body>
+
+</html>
+
+
+
