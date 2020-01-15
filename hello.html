@@ -1,4 +1,4 @@
-<!-- リスト2-14　関数を配列で整理する -->
+<!-- Chaoter3 リスト3-3　イベントの操作 -->
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -8,40 +8,20 @@
 	body { font-size:14pt; font-weight:plain; }
 	h1 { color:white;padding:5px; font-size:24pt;
 		background-color:red; }
-	.head { color:blue;  font-weight:bold;}
 	</style>
+
 	<script>
-var syohi_zei = new Object();
-
-syohi_zei.tax = 8;
-syohi_zei.price = 0;
-
-syohi_zei.kingaku = function(){
-	document.write('<p><span class="head">金額：</span>' 
-		+ syohi_zei.price + '円</p>');
-}
-syohi_zei.zeikomi = function(){
-	var n = syohi_zei.price * (100 + syohi_zei.tax) / 100;
-	document.write('<p><span class="head">税込み価格：</span>' 
-		+ Math.floor(n) + '円</p>');
-}
-syohi_zei.zeinuki = function(){
-	var n = syohi_zei.price / ((100 + syohi_zei.tax) / 100);
-	document.write('<p><span class="head">税抜き価格：</span>' 
-		+ Math.floor(n) + '円</p>');
-}
-
+	function clickNow(){
+		var msg = document.querySelector('#msg');
+		msg.textContent = "クリックしたね！！！";
+	}
 	</script>
 </head>
 
 <body>
-	<h1>Hello!</h1>
-	<script>
-	syohi_zei['price'] = 12800; /*値段*/
-	syohi_zei['kingaku']();
-	syohi_zei['zeikomi']();
-	syohi_zei['zeinuki']();
-	</script>
+	<h1 id="title">Hello!</h1>
+	<p id="msg">ボタンをクリックして下さい。</p>
+	<button onclick="clickNow();">Click</button>
 </body>
-
 </html>
+
