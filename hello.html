@@ -1,4 +1,4 @@
-<!-- Chaoter3 リスト3-9　大きさ(縦横)を操作する -->
+<!-- Chaoter3 リスト3-10　位置を操作する -->
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -8,15 +8,19 @@
 	body { font-size:14pt; font-weight:plain; }
 	h1 { color:white;padding:5px; font-size:24pt;
 		background-color:red; }
+	#msg {
+		position:absolute;
+		width:100px; height:100px;
+		top:50px; left:150px;
+	}
 	</style>
-
 	<script>
 	function doChange(){
-		var w = document.querySelector('#w').value;
-		var h = document.querySelector('#h').value;
+		var x = document.querySelector('#x').value;
+		var y = document.querySelector('#y').value;
 		var msg = document.querySelector('#msg');
-		msg.style.height = h + 'px';
-		msg.style.width = w + 'px';
+		msg.style.left = x + 'px';
+		msg.style.top = y + 'px';
 	}
 	</script>
 </head>
@@ -24,13 +28,15 @@
 <body>
 	<h1 id="title">Hello!</h1>
 	<p id="msg" style="background-color:#ffaaaa;">
-		サイズを変更してみよう</p>
+		位置を変更してみよう</p>
 	<p>
-	<input type="range" id="w" min="50" max="500" 
-		onchange="doChange();"><br>
-	<input type="range" id="h" min="50" max="500" 
-		onchange="doChange();"><br>
+	<input type="range" id="x" min="10" max="500" 
+		value="150" onchange="doChange();"><br>
+	<input type="range" id="y" min="50" max="500"
+		value="50" onchange="doChange();"><br>
 	</p>
 </body>
 </html>
-<!-- これはすぐ変わる -->
+<!-- だから、メモリでいじった値をぶち込めばいいんだよね -->
+<!-- onclickはボタンのクリック、onchengeは即実行 -->
+
