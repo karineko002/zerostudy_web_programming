@@ -1,4 +1,4 @@
-<!-- Chaoter3 リスト3-7　スライダーとrgb関数で色を操作 -->
+<!-- Chaoter3 リスト3-8　フォントサイズを操作する -->
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -12,31 +12,21 @@
 
 	<script>
 	function clickNow(){
-		// 各要素の値を取り出す
-		var r = document.querySelector('#red').value;
-		var g = document.querySelector('#green').value;
-		var b = document.querySelector('#blue').value;
-		// これはよくわからん、ID="msg"のバックグラウンドカラーをいじくる
+		var s = document.querySelector('#size').value;
 		var msg = document.querySelector('#msg');
-		msg.style.backgroundColor = 'rgb(' + r + ',' + g + ',' + b + ')';
+		msg.style.fontSize = s + 'pt';
 	}
 	</script>
 </head>
 
 <body>
 	<h1 id="title">Hello!</h1>
-	<p id="msg">色を変更してみよう</p>
+	<p id="msg">フォントサイズを変更してみよう</p>
 	<p>
-	<!-- ここで値を調整 -->
-	<input type="range" id="red" max="255"><br>
-	<input type="range" id="green" max="255"><br>
-	<input type="range" id="blue" max="255"><br>
+	<!-- フォントサイズをいじる -->
+	<input type="range" id="size" min="9" max="128">
 	</p>
-	<!-- クリックしたら関数が実行バックグラウンドカラーが変更される -->
+	<!-- 関数の呼び出し -->
 	<button onclick="clickNow();">Click</button>
 </body>
-
 </html>
-
-
-
