@@ -1,4 +1,4 @@
-<!-- Chaoter3 リスト3-12　タグの追加削除 -->
+<!-- Chaoter3 リスト4-1　グラフィックを操作しよう -->
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -8,44 +8,18 @@
 	body { font-size:14pt; font-weight:plain;}
 	h1 { color:white;font-size:24pt;
 		background-color:red; }
-	#area {
-		background-color:#ffeeee;
-		margin:0px;
-		width:500px; height:500px;
-	}
-	.newelement {
-		margin:5px; padding: 5px;
-		border:solid 1px red;
+	#canvas {
+		background-color:white;
+		border: 1px solid gray;
 	}
 	</style>
-	<script>
-	var count = 0;
-	
-	function doDown(event){
-		switch (event.buttons){
-		case 1:
-			var w = event.clientX;
-			var h = event.clientY;
-			var obj = document.createElement('p');
-			obj.name = 'create element'
-			obj.className = 'newelement';
-			obj.textContent = "No, " + count++;
-			event.target.appendChild(obj);
-			break;
-		case 3:
-			if (event.target.name == 'create element'){
-				var parent = event.target.parentElement;
-				parent.removeChild(event.target);
-			}
-			break;
-		}
-		event.preventDefault();
-	}
-	</script>
+	<!-- ここで四角形を描画 -->
+	<script src="script.js"></script> 
 </head>
 
-<body>
+<body onload="draw();">
 	<h1 id="title">Hello!</h1>
-	<p id="area" onmousedown="doDown(event);">※エレメントの追加</p>
+	<canvas id="canvas" width="500" height="400"></canvas>
 </body>
 </html>
+
