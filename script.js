@@ -1,41 +1,19 @@
 function draw(){
-  // ▽
-	var pdata1 = [
+	var pdata = [
 		[50,100],
-		[350,100],
-		[200,300]
-  ];
-  // △
-	var pdata2 = [
-		[50,250],
-		[350,250],
-		[200,50]
+		[100,300],
+		[250,-100],
+		[300,100]
 	];
 	var canvas = document.querySelector('#canvas');
 	var context = canvas.getContext('2d');
-	context.strokeStyle = "black";
+	context.fillStyle = "#FF9999";
+	context.strokeStyle = "blue";
 	context.beginPath();
-	var p = pdata1[0];
-  context.moveTo(p[0], p[1]);
-  // ▽
-	for (var i = 1; i < pdata1.length; i++){
-		p = pdata1[i];
-		context.lineTo(p[0], p[1]);
-	}
-	context.closePath();
-	context.fillStyle = "rgba(0,255,0,0.5)";
-	context.fill();
+	context.moveTo(pdata[0][0], pdata[0][1]);
+	context.bezierCurveTo(
+		pdata[1][0],pdata[1][1],pdata[2][0],
+		pdata[2][1],pdata[3][0],pdata[3][1]);
 	context.stroke();
-	context.beginPath();
-	var p = pdata2[0];
-  context.moveTo(p[0], p[1]);
-  // △
-	for (var i = 1; i < pdata2.length; i++){
-		p = pdata2[i];
-		context.lineTo(p[0], p[1]);
-	}
-	context.closePath();
-	context.fillStyle = "rgba(0,0,255,0.5)";
-	context.fill();
-	context.stroke();
+
 }
