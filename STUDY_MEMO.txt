@@ -195,14 +195,16 @@ onlad
 taIndex属性
 →キーボードで入力ができるようになる
 <?>私のタイポがひどい。
-→
-→
-→
-→
-→
-→
-→
-→
+setIntrvalでアニメーション
+→一定時間ごとに処理を繰り返し呼び出す
+→変数 = setIntrval(実行する処理, 呼び出す間隔);
+→呼び出す間隔　ミリ秒
+steIntarvalの実行を停止
+→clearInterval(停止する番号);
+停止する番号？
+→setIntervalで返された識別番号のこと
+<?>var context = canvas.getContext('2d');
+→この’2d’ってなんだっけ？
 →
 →
 →
