@@ -1,4 +1,4 @@
-<!-- Chaoter4 リスト4-10　クリックした場所にイメージを表示 -->
+<!-- Chaoter4 リスト4-12　キーボードで操作する -->
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -13,13 +13,14 @@
 		border: 1px solid gray;
 	}
 	</style>
-	<!-- ここで四角形を描画 -->
+	<!-- イメージの処理 -->
 	<script src="script.js"></script> 
 </head>
 
 <body onload="initial();">
 	<h1 id="title">Hello!</h1>
-	<canvas id="canvas" width="500" height="400"></canvas>
+	<!-- キャンバス -->
+	<canvas id="canvas" width="500" height="400" tabIndex="0"></canvas>
 </body>
 </html>
 
