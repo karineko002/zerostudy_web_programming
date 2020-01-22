@@ -1,4 +1,4 @@
-<!-- Chaoter5 リスト5-2　制御構文について(for) -->
+<!-- Chaoter5 リスト5-2　配列と連想配列 -->
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -13,18 +13,15 @@
 </head>
 
 <body>
-  <h1>軽減税率対応</h1>
+  <h1>Hello!</h1>
   <p>
   <?php 
-    $classification = "";
-    $price = 12300;
-    $tax = 0.08;
-    $total = 10;
-
-    for($i = 1; $i <= 100; $i++){
-      echo $i;    
+    $data = [98,79,56,83,69];
+    $total = 0;
+    for($i = 0;$i < count($data); $i++){
+      $total += $data[$i];
     }
-
+    echo "データの合計は、 {$total} です。";
 
   ?>
   </p>
