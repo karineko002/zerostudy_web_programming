@@ -1,4 +1,4 @@
-<!-- Chaoter5 リスト5-2　制御構文について(while) -->
+<!-- Chaoter5 リスト5-2　制御構文について(for) -->
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -21,27 +21,10 @@
     $tax = 0.08;
     $total = 10;
 
-    while($total <= 100){
-      echo $total;
-      $total++;
+    for($i = 1; $i <= 100; $i++){
+      echo $i;    
     }
 
-    // switch($classification){
-    // case 'food';
-    //   $total = $price * (1.0 + $tax);
-    //   echo "食品です。";
-    //   echo "$price 円の税込み価格は、$total 円です。"; 
-    // break;
-
-    // case 'book';
-    //   $total = $price * (1.0 + $tax);
-    //   echo "本です。";
-    //   echo "$price 円の税込み価格は、$total 円です。"; 
-    // break;
-
-    // default;
-    //   echo "何も購入してません。";
-    // }
 
   ?>
   </p>
