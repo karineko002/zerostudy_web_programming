@@ -1,4 +1,4 @@
-<!-- Chaoter5 リスト5-1　サーバープログラムを作ろう -->
+<!-- Chaoter5 リスト5-2　制御構文について(IF) -->
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -13,8 +13,26 @@
 </head>
 
 <body>
-  <h1>Hello!</h1>
-  <p><?php echo "これはPHPのサンプルです。"; ?></p>
+  <h1>軽減税率対応</h1>
+  <p>
+  <?php 
+    $classification = "food";
+    $price = 12300;
+    $tax = 0.08;
+
+    if($classification == "food"){
+      $total = $price * (1.0 + $tax);
+      echo "食品です";
+      echo "$price 円の税込み価格は、$total 円です。"; 
+    }else{
+      $tax = 0.1;
+      $total = $price * (1.0 + $tax);
+      echo "食品以外です";
+      echo "$price 円の税込み価格は、$total 円です。";
+    }
+
+  ?>
+  </p>
   </body>
   </html>
 
