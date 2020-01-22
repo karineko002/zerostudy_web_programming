@@ -1,4 +1,4 @@
-<!-- Chaoter5 リスト5-4　foreachという配列用の繰り返しを使う -->
+<!-- Chaoter5 リスト5-4　連想配列について -->
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -16,12 +16,18 @@
   <h1>Hello!</h1>
   <p>
   <?php 
-    $data = [98,79,56,83,70];
+    $data = [
+      '国語'=> 98,
+      '数学'=> 79,
+      '英語'=> 56,
+      '理科'=> 83,
+      '社会'=> 69];
     $total = 0;
-    foreach($data as $item){
+    foreach($data as $key => $item){
+      echo "{$key}は、{$item}点です。<br>";
       $total += $item;
     }
-    echo "データの合計は、 {$total} です。";
+    echo "<br>合計は、 {$total} です。";
 
   ?>
   </p>
