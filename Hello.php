@@ -1,4 +1,4 @@
-<!-- Chaoter5 リスト5-2　制御構文について(IF) -->
+<!-- Chaoter5 リスト5-2　制御構文について(switch) -->
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -16,19 +16,25 @@
   <h1>軽減税率対応</h1>
   <p>
   <?php 
-    $classification = "food";
+    $classification = "";
     $price = 12300;
     $tax = 0.08;
 
-    if($classification == "food"){
+    switch($classification){
+    case 'food';
       $total = $price * (1.0 + $tax);
-      echo "食品です";
+      echo "食品です。";
       echo "$price 円の税込み価格は、$total 円です。"; 
-    }else{
-      $tax = 0.1;
+    break;
+
+    case 'book';
       $total = $price * (1.0 + $tax);
-      echo "食品以外です";
-      echo "$price 円の税込み価格は、$total 円です。";
+      echo "本です。";
+      echo "$price 円の税込み価格は、$total 円です。"; 
+    break;
+
+    default;
+      echo "何も購入してません。";
     }
 
   ?>
