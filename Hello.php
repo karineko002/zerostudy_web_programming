@@ -1,4 +1,4 @@
-<!-- Chaoter5 リスト5-4　連想配列について -->
+<!-- Chaoter5 リスト5-4　関数を利用しよう -->
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -16,18 +16,30 @@
   <h1>Hello!</h1>
   <p>
   <?php 
-    $data = [
-      '国語'=> 98,
-      '数学'=> 79,
-      '英語'=> 56,
-      '理科'=> 83,
-      '社会'=> 69];
-    $total = 0;
-    foreach($data as $key => $item){
-      echo "{$key}は、{$item}点です。<br>";
-      $total += $item;
+    // テーブル
+    echo'<table>';
+    // hanakoのデータ
+    $data = getData('hanako');
+    printData($data);
+    // taroのデータ
+    $data = getData('taro');
+    printData($data);
+    echo'</table>';
+
+    function getData($name){
+      $data = [
+      // 'Key' => ['{$arr[0]}','{$arr[1]}']
+        'taro' => ['taro@yamada','090-999-999'],
+        'hanako' => ['hanako@flower','080-888-888'],
+        'sachiko' => ['sachiko@happy','070-777-777'],
+        'tuyano' => ['syoda@tuyano','060-666-666']
+      ];
+      return $data[$name];
     }
-    echo "<br>合計は、 {$total} です。";
+
+    function printData($arr){
+      echo "<tr><td>{$arr[0]}</td><td>{$arr[1]}</td></tr>";
+    }
 
   ?>
   </p>
