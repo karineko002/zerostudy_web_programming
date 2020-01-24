@@ -1,4 +1,4 @@
-<!-- Chaoter5 リスト5-7　クエリパラメーターを使おう -->
+<!-- Chaoter5 リスト5-8　フォームの送信 -->
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -12,37 +12,21 @@
   </style>
 </head>
 
-<body>
-  <h1>Hello!</h1>
-  <p>
-  <?php
-$key = $_GET['key'];
-echo "<p>「{$key}」のデータ</p>";
-echo'<table>';
-$data = getData($key);
-printData($data);
-echo '</table>';
-
-function getData($key){
-	$data = [
-		'taro' => ['taro@yamada','090-999-999'], 
-		'hanako' => ['hanako@flower','080-888-888'], 
-		'sachiko' => ['sachico@happy','070-777-777'], 
-		'tuyano' => ['syoda@tuyano.com','060-666-666']
-	];
-	if (isset($data[$key])){
-		return $data[$key];
-	} else {
-		return ['not found','...'];
-	}
-}
-
-function printData($arr){
-	echo "<tr><td>{$arr[0]}</td><td>{$arr[1]}</td></tr>";
+<?php
+$msg = '';
+$result = 'お名前は？';
+if(isset($_POST['msg'])){
+  $msg = $_POST['msg'];
+  $result = "こんにちは、 {$msg}さん！";
 }
 ?>
-
-  </p>
+<body>
+  <h1>Hello!</h1>
+  <p><?php echo $result; ?></p>
+  <form method="post" action="/zerostudy_web_programming/hello.php">
+    <input type="text" name="msg" value="<?php echo $msg; ?>">
+    <input type="submit" value="送信">
+  </form>
   </body>
   </html>
 
