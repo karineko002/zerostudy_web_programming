@@ -1,4 +1,4 @@
-<!-- Chaoter4 リスト4-15　キャラクタをオブジェクトにまとめよう -->
+<!-- Chaoter5 リスト5-10　AjaxでPHPにアクセスする -->
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -8,19 +8,19 @@
 	body { font-size:14pt; font-weight:plain;}
 	h1 { color:white;font-size:24pt;
 		background-color:red; }
-	#canvas {
+	/* #canvas {
 		background-color:white;
 		border: 1px solid gray;
-	}
+	} */
 	</style>
-	<!-- イメージの処理 -->
 	<script src="script.js"></script> 
 </head>
 
-<body onload="initial();">
+<body>
 	<h1 id="title">Hello!</h1>
-	<!-- キャンバス -->
-	<canvas id="canvas" width="500" height="400" tabIndex="0"></canvas>
+	<p id="msg">今、何時かな？</p>
+	<button onclick="onClickBtn();">CHECK!</button>
 </body>
 </html>
 
+  <!-- access http://localhost/zerostudy_web_programming/hello.html -->

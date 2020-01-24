@@ -267,6 +267,31 @@ htmlspecialchars関数
 →$変数 = htmlspecialchars(テキスト)
 →実は最近はダサいから使われてない！！！！
 →Ajaxを使おう！
+Ajax(えいじゃっくす)
+→XMLHttpRequestオブジェクト
+→オブジェクトの作成：
+  var xhr = new XMLHttpRequest();
+→オープン
+  xhr.open('GETかPOST’,'アクセス先',true);
+  xhr.open('アクセス方式’,'アクセス先のアドレス',同期非同期);
+→onloadイベントを設定
+  xhr.onload = function(e){
+    if(this.status == 200){
+      …受信した処理を用意…
+    }
+  };
+→通信開始
+  xhr.send();
+→
+  <!-- access http://localhost/zerostudy_web_programming/hello.php -->
+  <!-- クエリパラメータ用access http://localhost/zerostudy_web_programming/hello.php?key=taro -->
+→
+→
+→
+→
+→
+→
+→
 →
 
 
