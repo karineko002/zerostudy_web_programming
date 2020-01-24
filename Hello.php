@@ -22,7 +22,7 @@ if(isset($_POST['msg'])){
 ?>
 <body>
   <h1>Hello!</h1>
-  <p><?php echo $result; ?></p>
+  <p><?php echo htmlspecialchars($result); ?></p>
   <form method="post" action="/zerostudy_web_programming/hello.php">
     <input type="text" name="msg" value="<?php echo $msg; ?>">
     <input type="submit" value="送信">
