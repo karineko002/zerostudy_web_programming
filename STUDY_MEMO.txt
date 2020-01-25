@@ -283,12 +283,16 @@ Ajax(えいじゃっくす)
 →通信開始
   xhr.send();
 →
+一時退避
   <!-- access http://localhost/zerostudy_web_programming/hello.php -->
   <!-- クエリパラメータ用access http://localhost/zerostudy_web_programming/hello.php?key=taro -->
-→
-→
-→
-→
+POST送信
+→必要な情報をサーバに送る
+FormDataオブジェクト
+→フォームのデータを管理する
+エラーについて
+→<br /> <b>Warning</b>: A non-numeric value encountered in <b>C:\xampp\htdocs\zerostudy_web_programming\Hello.php</b> on line <b>10</b><br /> taro,taro@yamada,090-999-999
+→script.jsの「var val = document.querySelector('#number').Value」のvalueが大文字だったために起こった
 →
 →
 →
