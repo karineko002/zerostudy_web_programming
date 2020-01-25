@@ -1,4 +1,4 @@
-<!-- Chaoter5 リスト5-16　フォームをPOST送信する -->
+<!-- Chaoter5 リスト5-17　一行ごとに取り出す -->
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -8,16 +8,24 @@
 	body { font-size:14pt; font-weight:plain;}
 	h1 { color:white;font-size:24pt;
 		background-color:red; }
-	/* #canvas {
-		background-color:white;
-		border: 1px solid gray;
-	} */
+  table td { background-color:#aaffaa; }
 	</style>
 </head>
 
 <body>
-	<h1>Hello!</h1>
-	<p><?php readfile('sample.txt'); ?></p>
+  <h1>Hello!</h1>
+  <table>
+  <?php 
+  $data = @file('sample.txt') or
+    exit('<tr><td>ファイルの読み込みに失敗しました。</td></tr>');
+
+  $num = 0;
+  foreach($data as $line){
+    $num++;
+    echo "<tr><td>{$num}</td><td>{$line}</td></tr>";
+  }
+  ?>
+  </table>
 </body>
 </html>
 

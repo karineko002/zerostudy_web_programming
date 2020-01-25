@@ -295,7 +295,20 @@ FormDataオブジェクト
 →script.jsの「var val = document.querySelector('#number').Value」のvalueが大文字だったために起こった
 <?php readfile('sample.txt'); ?>
 →テキストファイルを出力する
-→@readfile(ファイル名) or exit(エラーメッセージ)
+→@readfile(ファイル名) or exit(エラーメッセージ);　という書き方もある
+@file
+→引数に指定したファイルを読み込み、それを段落ごとに配列としてまとめて返す働きをする
+→
+→
+→
+→
+→
+→
+→
+→
+→
+→
+→
 →
 →
 
