@@ -293,8 +293,9 @@ FormDataオブジェクト
 エラーについて
 →<br /> <b>Warning</b>: A non-numeric value encountered in <b>C:\xampp\htdocs\zerostudy_web_programming\Hello.php</b> on line <b>10</b><br /> taro,taro@yamada,090-999-999
 →script.jsの「var val = document.querySelector('#number').Value」のvalueが大文字だったために起こった
-→
-→
+<?php readfile('sample.txt'); ?>
+→テキストファイルを出力する
+→@readfile(ファイル名) or exit(エラーメッセージ)
 →
 →
 

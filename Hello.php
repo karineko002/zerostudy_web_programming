@@ -1,16 +1,24 @@
-<?php
-$data = [
-  "taro,taro@yamada,090-999-999",
-  "hanako,hanako@yamada,080-888-888",
-  "sachiko,sachiko@yamada,070-777-777",
-];
+<!-- Chaoter5 リスト5-16　フォームをPOST送信する -->
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>Hello!</title>
+	<style>
+	body { font-size:14pt; font-weight:plain;}
+	h1 { color:white;font-size:24pt;
+		background-color:red; }
+	/* #canvas {
+		background-color:white;
+		border: 1px solid gray;
+	} */
+	</style>
+</head>
 
-$msg = '';
-if(isset($_POST['number'])){
-  $n = $_POST['number']*1;
-  if($n < 0){$n = 0;}
-  if($n >= count($data)){$n = count($data) - 1; }
-  $msg = $data[$n];
-}
-echo $msg;
-?>
+<body>
+	<h1>Hello!</h1>
+	<p><?php readfile('sample.txt'); ?></p>
+</body>
+</html>
+
+ <!-- access http://localhost/zerostudy_web_programming/hello.php -->
